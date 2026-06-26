@@ -187,23 +187,33 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Hamburger Toggle */}
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          onClick={() => setMobileMenuOpen(true)}
           className="hamburger-btn"
+          aria-label="Open menu"
         >
-          {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          <Menu size={24} />
         </button>
       </div>
 
-      {/* Mobile menu block */}
+      {/* Mobile menu full-screen overlay */}
       <AnimatePresence>
         {mobileMenuOpen && (
           <motion.div
-            initial={{ opacity: 0, height: 0 }}
-            animate={{ opacity: 1, height: "auto" }}
-            exit={{ opacity: 0, height: 0 }}
-            className="mobile-menu"
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.3, ease: "easeInOut" }}
+            className="mobile-menu-overlay"
           >
-            <ul>
+            <button
+              className="close-btn"
+              onClick={() => setMobileMenuOpen(false)}
+              aria-label="Close menu"
+            >
+              <X size={30} />
+            </button>
+
+            <ul className="mobile-menu-links">
               {navLinks.map((link) => {
                 const isActive = activeSection === link.href.slice(1);
                 return (
@@ -211,10 +221,7 @@ export const Navbar: React.FC = () => {
                     <a
                       href={link.href}
                       onClick={(e) => handleLinkClick(e, link.href)}
-                      style={{
-                        color: isActive ? "var(--gold)" : "var(--text-secondary)",
-                        transition: "color 0.3s ease",
-                      }}
+                      className={isActive ? "active" : ""}
                     >
                       {t(link.labelKey)}
                     </a>
@@ -242,7 +249,7 @@ export const Navbar: React.FC = () => {
           border: none;
           color: #fff;
           cursor: pointer;
-          margin-left: 1.5rem;
+          margin-left: 1rem;
           padding: 0.5rem;
           align-items: center;
           justify-content: center;
@@ -253,39 +260,64 @@ export const Navbar: React.FC = () => {
           color: var(--gold);
         }
 
-        .mobile-menu {
-          position: absolute;
-          top: 100%;
+        .mobile-menu-overlay {
+          position: fixed;
+          top: 0;
           left: 0;
-          width: 100%;
-          background: #050505;
-          border-bottom: 1px solid rgba(255, 255, 255, 0.08);
-          padding: 1.5rem 5%;
-          z-index: 999;
+          width: 100vw;
+          height: 100vh;
+          background: rgba(3, 3, 3, 0.98);
+          backdrop-filter: blur(20px);
+          -webkit-backdrop-filter: blur(20px);
+          z-index: 9999;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
         }
 
-        .mobile-menu ul {
+        .close-btn {
+          position: absolute;
+          top: 2rem;
+          right: 2rem;
+          background: transparent;
+          border: none;
+          color: #fff;
+          cursor: pointer;
+          padding: 0.5rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: color 0.3s ease;
+        }
+
+        .close-btn:hover {
+          color: var(--gold);
+        }
+
+        .mobile-menu-links {
           list-style: none;
           padding: 0;
           margin: 0;
           display: flex;
           flex-direction: column;
-          gap: 1.2rem;
+          align-items: center;
+          gap: 2.5rem;
         }
 
-        .mobile-menu a {
+        .mobile-menu-links a {
           color: var(--text-secondary);
-          font-weight: bold;
-          font-size: 0.9rem;
+          font-weight: 700;
+          font-size: 1.8rem;
           text-transform: uppercase;
           text-decoration: none;
-          display: block;
-          letter-spacing: 1px;
-          transition: color 0.3s ease;
+          letter-spacing: 2px;
+          transition: all 0.3s ease;
         }
 
-        .mobile-menu a:hover {
+        .mobile-menu-links a:hover, .mobile-menu-links a.active {
           color: var(--gold);
+          text-shadow: 0 0 15px var(--gold-glow);
         }
 
         @media (max-width: 768px) {

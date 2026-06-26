@@ -124,7 +124,7 @@ export const Footer: React.FC = () => {
             onClick={(e) => handleLinkClick(e, "#home")}
             className="back-to-top"
           >
-            <ChevronUp className="w-4 h-4" style={{ display: "inline-block", verticalAlign: "middle" }} />
+            <ChevronUp size={16} style={{ display: "inline-block", verticalAlign: "middle" }} />
             <span>{t("footer-back-to-top")}</span>
           </a>
         </div>

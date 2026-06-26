@@ -45,6 +45,7 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
           controls={isPlaying}
           preload="metadata"
           playsInline
+          webkit-playsinline="true"
           onPlay={handlePlay}
           onPause={handlePause}
           onEnded={handlePause}
@@ -53,11 +54,16 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
         </video>
 
         {!isPlaying && (
-          <div className="play-overlay" onClick={handlePlayClick}>
+          <button
+            type="button"
+            className="play-overlay"
+            onClick={handlePlayClick}
+            aria-label="Play video"
+          >
             <div className="play-button-icon">
-              <Play className="w-6 h-6 fill-current" style={{ marginLeft: "2px" }} />
+              <Play size={24} className="fill-current" style={{ marginLeft: "2px" }} />
             </div>
-          </div>
+          </button>
         )}
       </div>
 

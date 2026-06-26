@@ -196,7 +196,7 @@ export const Contact: React.FC = () => {
               >
                 {loading ? (
                   <>
-                    <Loader2 className="w-5 h-5 spinner" />
+                    <Loader2 size={20} className="spinner" />
                     <span>
                       {t("form-submit") === "Xabar yuborish"
                         ? "Yuborilmoqda..."
@@ -235,9 +235,9 @@ export const Contact: React.FC = () => {
             }}
           >
             {toast.type === "success" ? (
-              <CheckCircle className="w-5 h-5 text-green-500 drop-shadow-[0_0_5px_rgba(76,175,80,0.4)]" />
+              <CheckCircle size={20} className="text-green-500 drop-shadow-[0_0_5px_rgba(76,175,80,0.4)]" />
             ) : (
-              <AlertTriangle className="w-5 h-5 text-red-500 drop-shadow-[0_0_5px_rgba(244,67,54,0.4)]" />
+              <AlertTriangle size={20} className="text-red-500 drop-shadow-[0_0_5px_rgba(244,67,54,0.4)]" />
             )}
             <span className="text-white text-sm font-semibold">{toast.message}</span>
           </motion.div>

@@ -170,7 +170,7 @@ export const Experience: React.FC = () => {
                 transition: "background-color 0.2s",
               }}
             >
-              <X className="w-6 h-6" />
+              <X size={24} />
             </button>
             <motion.div
               initial={{ scale: 0.9, opacity: 0 }}
