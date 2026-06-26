@@ -1,0 +1,6 @@
+{
+  "buildCommand": "mkdir -p public && cp -r * public/ || true",
+  "outputDirectory": "public",
+  "installCommand": "echo 'No install step required'",
+  "framework": null
+}

@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ozodbek Salohiddinov - Gen AI Expert & Prompt Engineer</title>
+    <link rel="stylesheet" href="style.css?v=11">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="main.js?v=11" defer></script>
+</head>
+<body>
+    <!-- Background interactive elements -->
+    <div id="bg-glow"></div>
+
+    <nav class="navbar">
+        <div class="logo-container">
+            <img src="887abe33-653f-406f-97b1-7c0ea22f0b2d.png" alt="Logo" class="nav-logo">
+            <span class="logo-text">Ozodbek Salohiddinov</span>
+        </div>
+        
+        <div class="nav-right">
+            <ul class="nav-links">
+                <li><a href="#home" data-i18n="nav-home">Asosiy</a></li>
+                <li><a href="#about" data-i18n="nav-about">Men haqimda</a></li>
+                <li><a href="#experience" data-i18n="nav-experience">Tajriba</a></li>
+                <li><a href="#projects" data-i18n="nav-projects">Loyihalar</a></li>
+                <li><a href="#media" data-i18n="nav-media">Media</a></li>
+                <li><a href="#contact" data-i18n="nav-contact">Aloqa</a></li>
+            </ul>
+
+            <!-- Language Selector with Real Flags -->
+            <div class="lang-selector">
+                <button class="lang-btn"><img src="https://flagcdn.com/w40/uz.png" alt="UZ" class="flag-icon"> UZ <i class="fa-solid fa-chevron-down"></i></button>
+                <div class="lang-dropdown">
+                    <button data-lang="uz"><img src="https://flagcdn.com/w40/uz.png" alt="UZ" class="flag-icon"> O'zbekcha</button>
+                    <button data-lang="en"><img src="https://flagcdn.com/w40/us.png" alt="EN" class="flag-icon"> English</button>
+                    <button data-lang="ru"><img src="https://flagcdn.com/w40/ru.png" alt="RU" class="flag-icon"> Русский</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <!-- Hero Section with Background Video inside it -->
+        <section id="home" class="hero">
+            <!-- Background Video inside Hero (scrolls up with it) -->
+            <video autoplay muted loop playsinline class="bg-video">
+                <source src="background.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+            
+            <!-- Water Fill Overlay that drops from top -->
+            <div class="water-fill-overlay">
+                <!-- Gold Dust Particles inside the water -->
+                <div class="gold-dust-container" id="goldDust"></div>
+            </div>
+
+            <div class="hero-content">
+                <h1 class="welcome-text" data-i18n="welcome">WELCOME TO MY LIFE STYLE...</h1>
+                
+                <div class="hero-profile-box">
+                    <h2 class="hero-name" data-i18n="hero-name">Ozodbek Salohiddinov</h2>
+                    <h3 class="hero-title" data-i18n="title">GEN AI EXPERT | PROMPT ENGINEER | AI MENTOR</h3>
+                </div>
+
+                <div class="hero-socials">
+                    <a href="https://www.instagram.com/ai_salokhiddinov" target="_blank" class="hero-social-btn" title="Instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://t.me/Salohiddinovblog_0" target="_blank" class="hero-social-btn" title="Telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/ozodbek-salohiddinov-67aa513b9" target="_blank" class="hero-social-btn" title="LinkedIn">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://www.facebook.com/share/19JQNEyBKS/" target="_blank" class="hero-social-btn" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://youtube.com/@salohiddinovozodbek?si=JY85DjKA9XyRj3vN" target="_blank" class="hero-social-btn" title="YouTube">
+                        <i class="fa-brands fa-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="scroll-down">
+                <span class="scroll-text" data-i18n="scroll">SCROLL TO EXPLORE</span>
+                <div class="scroll-line-container">
+                    <div class="scroll-line-active"></div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section -->
+        <section id="about" class="about hidden">
+            <h2 class="section-title" data-i18n="about-title">Men <span class="gold-text">Haqimda</span></h2>
+            <div class="about-vertical-layout">
+                <!-- Top: Portrait image -->
+                <div class="about-image-wrapper">
+                    <div class="about-image-container glass-card">
+                        <img src="profile.png" alt="Ozodbek Salohiddinov" class="about-profile-img">
+                    </div>
+                </div>
+                
+                <!-- Bottom: Bio details card -->
+                <div class="about-content-card glass-card">
+                    <!-- Name & Surname in Large Premium Font -->
+                    <h3 class="about-name gold-text">Ozodbek Salohiddinov</h3>
+                    
+                    <!-- Role Tagline -->
+                    <div class="about-role-tag">
+                        <i class="fa-solid fa-briefcase gold-text"></i>
+                        <span data-i18n="about-role">AI Mentor (100+ o'quvchilar o'qitganman) | Hozirgacha 50+ loyihalarda AI Content Creatorman</span>
+                    </div>
+                    
+                    <!-- Biography Text -->
+                    <div class="about-bio-text">
+                        <p data-i18n="about-p1">Men sun’iy intellektni real biznes va ijodiy loyihalarda amaliy natijalarga yo‘naltirishga ixtisoslashgan mutaxassisman. Bir yildan ortiq tajribam davomida turli LLM (Large Language Model) va Generative AI texnologiyalaridan foydalanib, veb-saytlar, reklama roliklari, kontent loyihalari hamda kreativ video mahsulotlar va mini filmlar tayyorlab kelmoqdaman.</p>
+                        
+                        <p data-i18n="about-p2">Shuningdek, 100 dan ortiq o‘quvchilarga sun’iy intellekt vositalaridan samarali foydalanish, ish jarayonlarini avtomatlashtirish va AI texnologiyalarini amaliy loyihalarda qo‘llash bo‘yicha bilim ulashganman. Men uchun AI shunchaki vosita emas, balki inson imkoniyatlarini kengaytiruvchi va yangi qiymat yaratuvchi texnologiyadir.</p>
+                        
+                        <p data-i18n="about-p3">Faoliyatim davomida turli sohalar va kompaniyalarga sun’iy intellekt yechimlarini integratsiya qilish orqali ish samaradorligini oshirishga e’tibor qaratib kelmoqdaman. Kelajakdagi asosiy maqsadlarimdan biri — yirik kompaniyalar uchun sun'iy intelekt yordamida texnik yechimlar hamda yuqori sifatli video mahsulotlar tayyorlash, shuningdek, AI yordamida filmlar, multseriallar va to‘liq metrajli kino loyihalarini ishlab chiqishdir. Bu yo‘nalishda faol ishlamoqdaman va bosqichma-bosqich o‘z maqsadlarimga erishib kelayabman.</p>
+                        
+                        <p data-i18n="about-p4">Men faqat tayyor AI vositalaridan foydalanish bilan cheklanib qolmayman. Aksincha, murakkab AI tizimlari va loyihalarini qanday qurish, ularga qanday arxitektura yaratish va ularni real muammolarni hal qilishga qanday yo‘naltirish mumkinligini chuqur o‘rganishga intilaman. Shu bilan birga, o‘zim egallagan bilim va tajribalarni boshqalarga ulashish, yangi avlod mutaxassislarining rivojlanishiga hissa qo‘shish mening asosiy maqsadlarimdan biri hisoblanadi.</p>
+                        
+                        <p data-i18n="about-p5">Texnologiya, ta’lim va ijodkorlik kesishgan nuqtada faoliyat yuritib, sun’iy intellektni ko'proq insonlarga o'rgatishni niyat qilganman</p>
+                    </div>
+
+                    <!-- Social Channels inside the bio card -->
+                    <div class="about-socials-block">
+                        <h4 data-i18n="about-channels">Ijtimoiy Tarmoqlarim</h4>
+                        <div class="about-social-links">
+                            <a href="https://www.instagram.com/ai_salokhiddinov" target="_blank" class="about-social-item">
+                                <i class="fa-brands fa-instagram"></i> <span>Instagram</span>
+                            </a>
+                            <a href="https://t.me/Salohiddinovblog_0" target="_blank" class="about-social-item">
+                                <i class="fa-brands fa-telegram"></i> <span>Telegram</span>
+                            </a>
+                            <a href="https://www.linkedin.com/in/ozodbek-salohiddinov-67aa513b9" target="_blank" class="about-social-item">
+                                <i class="fa-brands fa-linkedin-in"></i> <span>LinkedIn</span>
+                            </a>
+                            <a href="https://www.facebook.com/share/19JQNEyBKS/" target="_blank" class="about-social-item">
+                                <i class="fa-brands fa-facebook-f"></i> <span>Facebook</span>
+                            </a>
+                            <a href="https://youtube.com/@salohiddinovozodbek?si=JY85DjKA9XyRj3vN" target="_blank" class="about-social-item">
+                                <i class="fa-brands fa-youtube"></i> <span>YouTube</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience hidden">
+            <h2 class="section-title" data-i18n="exp-title">Ish <span class="gold-text">Tajribasi</span></h2>
+            <div class="timeline">
+                <div class="timeline-item glass-card hidden">
+                    <div class="timeline-dot"></div>
+                    <h3 data-i18n="exp-1-title">AI Office - AI Creator</h3>
+                    <h4><span data-i18n="exp-1-sub">Yoshlar ishlari agentligi qoshida</span> <a href="https://www.instagram.com/gen_ai_office.uz?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="timeline-insta-link"><i class="fa-brands fa-instagram"></i></a></h4>
+                    <p class="timeline-date" data-i18n="exp-1-date">2025 - 2026</p>
+                    <p data-i18n="exp-1-desc">AI Office-da sun'iy intellektdan (AI) foydalangan holda kreativ kontentlar tayyorlash va AI loyihalarini boshqarish.</p>
+                </div>
+                <div class="timeline-item glass-card hidden">
+                    <div class="timeline-dot"></div>
+                    <h3 data-i18n="exp-2-title">Kurator & Shaxsiy Yordamchi</h3>
+                    <h4><span data-i18n="exp-2-sub">Mahmudjon Inomjonov Kurslari</span> <a href="https://www.instagram.com/mahmudjon_inomjonov?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="timeline-insta-link"><i class="fa-brands fa-instagram"></i></a></h4>
+                    <p class="timeline-date" data-i18n="exp-2-date">2025 - Hozirgacha</p>
+                    <p data-i18n="exp-2-desc">AI Master kurslarida o'quvchilarga yordam berish, darslarni tashkillashtirish va ustozimga shaxsiy yordamchilik qilish.</p>
+                </div>
+                <div class="timeline-item glass-card hidden">
+                    <div class="timeline-dot"></div>
+                    <h3 data-i18n="exp-4-title">5+ hokimiyatlarda AI mutaxassisi</h3>
+                    <h4 data-i18n="exp-4-sub">Davlat boshqaruvi va hokimiyat idoralari</h4>
+                    <p class="timeline-date" data-i18n="exp-4-date">2025 - 2026</p>
+                    <p data-i18n="exp-4-desc">Hokimiyatlarda ish samaradorligini oshirish maqsadida sun'iy intellekt yechimlarini joriy etish va davlat xizmatchilariga AI bo'yicha darslar o'tish.</p>
+                </div>
+                <div class="timeline-item glass-card hidden">
+                    <div class="timeline-dot"></div>
+                    <h3 data-i18n="exp-3-title">Autsorsing Hamkorlik</h3>
+                    <h4 data-i18n="exp-3-sub">Turli Kompaniyalar</h4>
+                    <p class="timeline-date" data-i18n="exp-3-date">2025 - 2026</p>
+                    <p data-i18n="exp-3-desc">50 dan ortiq yirik va kichik kompaniyalar bilan AI xizmatlari bo'yicha autsors tarzda hamkorlik qilib, loyihalarni muvaffaqiyatli topshirish.</p>
+                </div>
+            </div>
+
+            <!-- Certificates and Acknowledgements -->
+            <div class="certificates-section mt-10">
+                <div class="certificates-header">
+                    <span class="contact-badge" data-i18n="cert-badge">HUJJATLAR</span>
+                    <h2 class="certificates-title" data-i18n="cert-title">Sertifikatlar va tashakkurnomalar</h2>
+                    <p class="certificates-subtitle" data-i18n="cert-subtitle">Yetakchi muassasalarning tasdiqlangan hujjatlari</p>
+                </div>
+                
+                <div class="certificates-grid">
+                    <!-- Certificate 1: AI Master Curator -->
+                    <div class="cert-card glass-card hidden">
+                        <div class="cert-image-wrapper">
+                            <img src="sertifikat.jpg?v=3" alt="Sertifikat" class="cert-image" onerror="this.src='profile.png'">
+                        </div>
+                        <div class="cert-content">
+                            <h3 data-i18n="cert-1-title">Eng Talabchan Kurator</h3>
+                            <div class="cert-footer">
+                                <span class="cert-issuer" data-i18n="cert-1-issuer">AI Master</span>
+                                <span class="cert-date gold-text" data-i18n="cert-1-date">2026</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Certificate 2: GEN AI OFFICE -->
+                    <div class="cert-card glass-card hidden">
+                        <div class="cert-image-wrapper">
+                            <img src="tashakkurnoma.jpg?v=2" alt="Tashakkurnoma" class="cert-image" onerror="this.src='profile.png'">
+                        </div>
+                        <div class="cert-content">
+                            <h3 data-i18n="cert-2-title">Tashakkurnoma</h3>
+                            <div class="cert-footer">
+                                <span class="cert-issuer" data-i18n="cert-2-issuer">GEN AI OFFICE</span>
+                                <span class="cert-date gold-text" data-i18n="cert-2-date">2026</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="projects hidden">
+            <h2 class="section-title" data-i18n="proj-title">Qatnashgan <span class="gold-text">Loyihalarim</span></h2>
+            <div class="projects-grid">
+                <a href="https://www.instagram.com/bilim.ly" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Bilim.ly</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/ai.mamasha" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>AI Mamasha</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/smartworlduz" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Smart World Uz</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/saberenergy" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Saber Energy</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/temurkhatamov" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Temur Khatamov</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/gigant_buxgalter_uz" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Gigant Buxgalter Uz</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/mutolaaxona?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Mutolaa</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/tuzuk_ai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Tuzuk AI</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+                <a href="https://www.instagram.com/reveoai?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="project-card glass-card hidden">
+                    <i class="fa-brands fa-instagram gold-text"></i>
+                    <h3>Reveo AI</h3>
+                    <p data-i18n="proj-desc">Loyiha bilan tanishish uchun bosing.</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- Media Section (Photos & Videos) -->
+        <section id="media" class="media hidden">
+            <h2 class="section-title" data-i18n="media-title">AI Animatsiyalar va <span class="gold-text">Kontent loyihalarim</span></h2>
+            
+            <div class="media-grid">
+                <!-- ================= VERTICAL VIDEOS (9:16) ================= -->
+                <!-- 1: saber_energy.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/saber_energy.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v1">Saber Energy</span>
+                </div>
+                <!-- 2: esit_222.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/esit_222.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v2">Creative Concept</span>
+                </div>
+                <!-- 3: reallyl.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/reallyl.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v3">Reels Concept</span>
+                </div>
+                <!-- 4: fashion.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/fashion.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v4">Fashion Style</span>
+                </div>
+                <!-- 5: 7_carbon_old.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/7_carbon_old.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v5">Carbon Concept</span>
+                </div>
+                <!-- 6: azamat_333.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/azamat_333.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v6">Cinematic Portrait I</span>
+                </div>
+                <!-- 7: azamat_somatov.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/azamat_somatov.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v7">Cinematic Portrait II</span>
+                </div>
+                <!-- 8: dilmuss_22.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/dilmuss_22.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v8">Aesthetic Portrait</span>
+                </div>
+                <!-- 9: huga_style_cut_short_version.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/huga_style_cut_short_version.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v9">Huga Style</span>
+                </div>
+                <!-- 10: muslim_short_versin_on.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/muslim_short_versin_on.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v10">Short Concept</span>
+                </div>
+                <!-- 11: hf_20260423_180017_98690f41_47ea_4a32_bb7c_6fd2726ff142.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/hf_20260423_180017_98690f41_47ea_4a32_bb7c_6fd2726ff142.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v11">Gen AI Motion</span>
+                </div>
+                <!-- 12: tom_and_jerry_storyboard.mp4 -->
+                <div class="media-card vertical glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/tom_and_jerry_storyboard.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v12">Storyboard Concept</span>
+                </div>
+                
+                <!-- ================= HORIZONTAL VIDEOS (16:9) ================= -->
+                <!-- 13: manashuni_joyla.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/manashuni_joyla.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v13">Creative Showcase</span>
+                </div>
+                <!-- 14: mahmudjon_inomjonov_jason_statham.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/mahmudjon_inomjonov_jason_statham.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v14">Jason Statham Cinematic</span>
+                </div>
+                <!-- 15: mersedes_benz.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/mersedes_benz.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v15">Mercedes Benz</span>
+                </div>
+                <!-- 16: sahro.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/sahro.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v16">Sahro Concept</span>
+                </div>
+                <!-- 17: adrenaline_ads.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/adrenaline_ads.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v17">Adrenaline Energy</span>
+                </div>
+                <!-- 18: estetik.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/estetik.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v18">Aesthetic Landscapes</span>
+                </div>
+                <!-- 19: img_5063.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/img_5063.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v19">Visual Concept I</span>
+                </div>
+                <!-- 20: img_5064.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/img_5064.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v20">Visual Concept II</span>
+                </div>
+                <!-- 21: hf_20260403_153858_757f5c5c_55f1_45a9_bee5_7f674b8ac18a.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/hf_20260403_153858_757f5c5c_55f1_45a9_bee5_7f674b8ac18a.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v21">AI Landscape Motion I</span>
+                </div>
+                <!-- 22: hf_20260430_065835_72779252_d08a_4490_b426_cd472adbf083_1.mp4 -->
+                <div class="media-card horizontal glass-card hidden">
+                    <video controls preload="metadata" playsinline>
+                        <source src="videolar/hf_20260430_065835_72779252_d08a_4490_b426_cd472adbf083_1.mp4" type="video/mp4">
+                    </video>
+                    <span class="media-title" data-i18n="media-v22">AI Landscape Motion II</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact hidden">
+            <div class="contact-split-container">
+                <!-- Left side: Info and Cards -->
+                <div class="contact-left">
+                    <span class="contact-badge" data-i18n="contact-badge">CONTACT</span>
+                    <h2 class="contact-heading" data-i18n="contact-heading">Keling,<br>bog'lanaylik</h2>
+                    <p class="contact-subheading" data-i18n="contact-subheading">AI bilan munosabatingizni o'zgartirishga tayyormisiz?</p>
+                    
+                    <div class="contact-cards">
+                        <a href="mailto:salohiddinovozodbek205@gmail.com" class="contact-card">
+                            <div class="card-icon"><i class="fa-regular fa-envelope"></i></div>
+                            <div class="card-info">
+                                <h3>Email</h3>
+                                <p>salohiddinovozodbek205@gmail.com</p>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ozodbek-salohiddinov-67aa513b9" target="_blank" class="contact-card">
+                            <div class="card-icon"><i class="fa-brands fa-linkedin-in"></i></div>
+                            <div class="card-info">
+                                <h3>LinkedIn</h3>
+                                <p>/in/ozodbek-salohiddinov</p>
+                            </div>
+                        </a>
+                        <a href="https://t.me/neyrophot0" target="_blank" class="contact-card">
+                            <div class="card-icon"><i class="fa-regular fa-paper-plane"></i></div>
+                            <div class="card-info">
+                                <h3>Telegram</h3>
+                                <p>@neyrophot0</p>
+                            </div>
+                        </a>
+                        <a href="tel:+998500887007" class="contact-card">
+                            <div class="card-icon"><i class="fa-solid fa-phone"></i></div>
+                            <div class="card-info">
+                                <h3>Telefon</h3>
+                                <p>+998 50 088 70 07</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right side: Form -->
+                <div class="contact-right">
+                    <div class="form-container">
+                        <h3 data-i18n="form-title">Xabar yuboring</h3>
+                        <form action="https://formsubmit.co/salohiddinovozodbek205@gmail.com" method="POST" id="contactForm">
+                            <!-- FormSubmit Settings -->
+                            <input type="hidden" name="_subject" value="Yangi xabar: CV Resume">
+                            <input type="hidden" name="_captcha" value="false">
+                            <input type="hidden" name="_template" value="table">
+                            
+                            <div class="form-group">
+                                <label data-i18n="form-name-label">ISMINGIZ</label>
+                                <input type="text" name="name" required data-i18n-placeholder="form-name-ph" placeholder="To'liq ismingiz">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label data-i18n="form-email-label">ELEKTRON POCHTA</label>
+                                <input type="email" name="email" required data-i18n-placeholder="form-email-ph" placeholder="siz@kompaniya.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label data-i18n="form-msg-label">XABARINGIZ</label>
+                                <textarea name="message" rows="5" required data-i18n-placeholder="form-msg-ph" placeholder="Maqsadlaringiz haqida ayting..."></textarea>
+                            </div>
+                            
+                            <button type="submit" class="submit-btn">
+                                <i class="fa-solid fa-paper-plane"></i> <span data-i18n="form-submit">Xabar yuborish</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-grid">
+                <!-- Column 1 -->
+                <div class="footer-col brand-col">
+                    <a href="#home" class="footer-logo">
+                        <div class="logo-box">OS</div>
+                        <span>Ozodbek <b>Salohiddinov</b></span>
+                    </a>
+                    <p class="footer-desc" data-i18n="footer-desc">Inson salohiyatini sun'iy intellekt bilan bog'lash</p>
+                    <div class="footer-socials">
+                        <a href="mailto:salohiddinovozodbek205@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                        <a href="https://www.linkedin.com/in/ozodbek-salohiddinov-67aa513b9"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://t.me/Salohiddinovblog_0"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2 -->
+                <div class="footer-col links-col">
+                    <h4 data-i18n="footer-quick-links">TEZKOR HAVOLALAR</h4>
+                    <ul>
+                        <li><a href="#about" data-i18n="nav-about">Men haqimda</a></li>
+                        <li><a href="#experience" data-i18n="nav-experience">Tajriba</a></li>
+                        <li><a href="#projects" data-i18n="nav-projects">Loyihalar</a></li>
+                        <li><a href="#media" data-i18n="nav-media">Media</a></li>
+                        <li><a href="#contact" data-i18n="nav-contact">Aloqa</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3 -->
+                <div class="footer-col skills-col">
+                    <h4 data-i18n="footer-skills">KO'NIKMALAR</h4>
+                    <ul>
+                        <li data-i18n="footer-skill-1">AI Dasturlar va Muhandislik</li>
+                        <li data-i18n="footer-skill-2">Ma'lumotlar va Dasturiy Ta'minot Asoslari</li>
+                        <li data-i18n="footer-skill-3">Mahsulot va Kreativ Texnologiyalar</li>
+                        <li data-i18n="footer-skill-4">Liderlik va Ekosistema</li>
+                    </ul>
+                </div>
+
+                <!-- Column 4 -->
+                <div class="footer-col contact-col">
+                    <h4 data-i18n="footer-contact-title">BOG'LANING</h4>
+                    <p data-i18n="footer-contact-text">AI sayohatingizni kuchaytirmoqchimisiz?<br>Bog'laning va birgalikda amalga oshiraylik.</p>
+                    <a href="#contact" class="footer-contact-btn">
+                        <span data-i18n="footer-contact-btn">Ozodbek Salohiddinov bilan bog'laning</span> &rarr;
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p data-i18n="footer-text">&copy; 2026 Ozodbek Salohiddinov. Barcha huquqlar himoyalangan.</p>
+                <a href="#home" class="back-to-top"><i class="fa-solid fa-chevron-up"></i> <span data-i18n="footer-back-to-top">Yuqoriga qaytish</span></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
