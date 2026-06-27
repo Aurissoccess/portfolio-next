@@ -156,7 +156,7 @@ export const MediaGallery: React.FC = () => {
   }, []);
 
   return (
-    <section id="media" className="media hidden">
+    <section id="media" className="media">
       <h2
         className="section-title"
         dangerouslySetInnerHTML={{ __html: t("media-title") }}
