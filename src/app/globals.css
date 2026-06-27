@@ -1448,16 +1448,38 @@ section {
         gap: 2rem;
     }
 
-    .form-container {
-        padding: 1.5rem 1.2rem;
-    }
-
-    .contact-card {
-        padding: 1rem;
+    .contact-left {
+        align-items: center;
+        text-align: center;
     }
 
     .contact-heading {
         font-size: clamp(2rem, 8vw, 2.8rem);
+        text-align: center;
+        width: 100%;
+    }
+
+    .contact-subheading {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+    }
+
+    .contact-cards {
+        width: 100%;
+        align-items: center;
+    }
+
+    .contact-card {
+        padding: 1rem;
+        width: 100%;
+        max-width: 450px;
+        box-sizing: border-box;
+    }
+
+    .form-container {
+        padding: 1.5rem 1.2rem;
     }
 }
 
