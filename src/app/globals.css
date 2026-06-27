@@ -1142,9 +1142,47 @@ section {
 @media (max-width: 900px) {
     .contact-split-container {
         grid-template-columns: 1fr;
+        padding: 1.5rem 1rem;
+        gap: 2rem;
     }
+
+    .contact-left {
+        align-items: center;
+        text-align: center;
+    }
+
     .contact-heading {
-        font-size: 2.8rem;
+        font-size: clamp(2rem, 8vw, 2.8rem);
+        text-align: center;
+        width: 100%;
+    }
+
+    .contact-subheading {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 90%;
+    }
+
+    .contact-cards {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .contact-card {
+        padding: 1rem;
+        width: 100%;
+        max-width: 450px;
+        margin: 0 auto;
+        box-sizing: border-box;
+    }
+
+    .form-container {
+        padding: 1.5rem 1.2rem;
     }
 }
 
@@ -1443,44 +1481,7 @@ section {
         grid-template-columns: 1fr;
     }
 
-    .contact-split-container {
-        padding: 1.5rem 1rem;
-        gap: 2rem;
-    }
 
-    .contact-left {
-        align-items: center;
-        text-align: center;
-    }
-
-    .contact-heading {
-        font-size: clamp(2rem, 8vw, 2.8rem);
-        text-align: center;
-        width: 100%;
-    }
-
-    .contact-subheading {
-        text-align: center;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 90%;
-    }
-
-    .contact-cards {
-        width: 100%;
-        align-items: center;
-    }
-
-    .contact-card {
-        padding: 1rem;
-        width: 100%;
-        max-width: 450px;
-        box-sizing: border-box;
-    }
-
-    .form-container {
-        padding: 1.5rem 1.2rem;
-    }
 }
 
 /* Toast Notification Styles */
