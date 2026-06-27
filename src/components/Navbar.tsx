@@ -205,13 +205,25 @@ export const Navbar: React.FC = () => {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="mobile-menu-overlay"
           >
-            <button
-              className="close-btn"
-              onClick={() => setMobileMenuOpen(false)}
-              aria-label="Close menu"
-            >
-              <X size={30} />
-            </button>
+            <div className="mobile-menu-header">
+              <div className="logo-container">
+                <Image
+                  src="/profile.png"
+                  alt="Ozodbek Salohiddinov"
+                  width={32}
+                  height={32}
+                  style={{ borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%", border: "1.5px solid var(--gold)" }}
+                />
+                <span className="logo-text" style={{ fontSize: "1.1rem" }}>Ozodbek Salohiddinov</span>
+              </div>
+              <button
+                className="close-btn"
+                onClick={() => setMobileMenuOpen(false)}
+                aria-label="Close menu"
+              >
+                <X size={24} />
+              </button>
+            </div>
 
             <ul className="mobile-menu-links">
               {navLinks.map((link) => {
@@ -229,6 +241,42 @@ export const Navbar: React.FC = () => {
                 );
               })}
             </ul>
+
+            <div className="mobile-lang-section">
+              {(Object.keys(flags) as Language[]).map((lang) => (
+                <button
+                  key={lang}
+                  className={`mobile-lang-pill ${language === lang ? "active" : ""}`}
+                  onClick={() => {
+                    changeLanguage(lang);
+                  }}
+                >
+                  <Image
+                    src={`https://flagcdn.com/w40/${flags[lang].code}.png`}
+                    alt={flags[lang].label}
+                    width={18}
+                    height={12}
+                    style={{ marginRight: "6px", borderRadius: "2px" }}
+                  />
+                  {lang.toUpperCase()}
+                </button>
+              ))}
+            </div>
+
+            <a
+              href="#contact"
+              className="mobile-action-btn"
+              onClick={(e) => {
+                setMobileMenuOpen(false);
+                const el = document.getElementById("contact");
+                if (el) {
+                  e.preventDefault();
+                  el.scrollIntoView({ behavior: "smooth" });
+                }
+              }}
+            >
+              {language === "uz" ? "Hamkorlik qilish" : language === "en" ? "Let's Collaborate" : "Сотрудничать"}
+            </a>
           </motion.div>
         )}
       </AnimatePresence>
