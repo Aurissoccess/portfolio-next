@@ -1351,6 +1351,14 @@ section {
         display: none;
     }
     
+    .nav-right {
+        gap: 0.8rem;
+    }
+    
+    .hamburger-btn {
+        margin-left: 0;
+    }
+    
     .navbar {
         padding: 1rem 5%;
     }
