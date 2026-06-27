@@ -72,13 +72,15 @@ body {
 }
 
 .section-title {
-    font-size: 3rem;
+    font-size: clamp(1.8rem, 6.5vw, 3rem);
     text-align: center;
-    margin-bottom: 4rem;
+    margin-bottom: clamp(2rem, 8vh, 4rem);
     font-weight: bold;
     letter-spacing: 2px;
     text-transform: uppercase;
     text-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
 }
 
 /* Glassmorphism Cards with Atmospheric Shadow */
