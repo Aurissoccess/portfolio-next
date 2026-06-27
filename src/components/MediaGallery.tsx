@@ -16,10 +16,21 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
+  const [videoSrc, setVideoSrc] = useState(`${video.src}#t=0.001`);
 
   const handlePlayClick = () => {
     if (videoRef.current) {
       setIsLoading(true);
+      
+      // If using the fragment preview source, swap it to the clean source
+      // and reload the player instantly before calling play
+      if (videoSrc.endsWith("#t=0.001")) {
+        const cleanSrc = video.src;
+        setVideoSrc(cleanSrc);
+        videoRef.current.src = cleanSrc;
+        videoRef.current.load();
+      }
+
       videoRef.current.play().catch((err) => {
         console.error("Video play blocked:", err);
         // Fallback: try to play it muted
@@ -66,7 +77,7 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
       <div className="video-wrapper">
         <video
           ref={videoRef}
-          src={`${video.src}#t=0.001`}
+          src={videoSrc}
           controls={isPlaying}
           preload="metadata"
           playsInline
