@@ -3,7 +3,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { useTranslation } from "@/context/LanguageContext";
 import { TranslationType } from "@/locales/translations";
-import { Play } from "lucide-react";
+import { Play, Loader2 } from "lucide-react";
 
 interface VideoItem {
   id: string;
@@ -15,15 +15,22 @@ interface VideoItem {
 const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   const handlePlayClick = () => {
     if (videoRef.current) {
+      setIsLoading(true);
       videoRef.current.play().catch((err) => {
         console.error("Video play blocked:", err);
         // Fallback: try to play it muted
         if (videoRef.current) {
           videoRef.current.muted = true;
-          videoRef.current.play().catch((e) => console.error("Muted play failed:", e));
+          videoRef.current.play().catch((e) => {
+            console.error("Muted play failed:", e);
+            setIsLoading(false);
+          });
+        } else {
+          setIsLoading(false);
         }
       });
     }
@@ -38,10 +45,20 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
       }
     });
     setIsPlaying(true);
+    setIsLoading(false);
   };
 
   const handlePause = () => {
     setIsPlaying(false);
+    setIsLoading(false);
+  };
+
+  const handleWaiting = () => {
+    setIsLoading(true);
+  };
+
+  const handlePlaying = () => {
+    setIsLoading(false);
   };
 
   return (
@@ -57,7 +74,17 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
           onPlay={handlePlay}
           onPause={handlePause}
           onEnded={handlePause}
+          onWaiting={handleWaiting}
+          onPlaying={handlePlaying}
+          onCanPlay={handlePlaying}
         />
+
+        {/* buffering/loading spinner */}
+        {isLoading && (
+          <div className="video-loader">
+            <Loader2 size={36} className="spinner" style={{ color: "var(--gold)" }} />
+          </div>
+        )}
 
         {!isPlaying && (
           <button
