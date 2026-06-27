@@ -66,7 +66,7 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
       <div className="video-wrapper">
         <video
           ref={videoRef}
-          src={video.src}
+          src={`${video.src}#t=0.001`}
           controls={isPlaying}
           preload="metadata"
           playsInline

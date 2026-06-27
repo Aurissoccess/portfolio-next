@@ -1661,3 +1661,12 @@ section {
     -webkit-backdrop-filter: blur(2px);
     border-radius: 8px;
 }
+
+.main-wrapper {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

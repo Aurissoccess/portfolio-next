@@ -41,7 +41,9 @@ export default function RootLayout({
       <body>
         <LanguageProvider>
           <InteractiveBackground />
-          {children}
+          <div className="main-wrapper">
+            {children}
+          </div>
         </LanguageProvider>
       </body>
     </html>
