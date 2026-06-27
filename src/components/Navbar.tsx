@@ -98,7 +98,7 @@ export const Navbar: React.FC = () => {
           width={40}
           height={40}
           className="nav-logo"
-          style={{ borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%", border: "1.5px solid var(--gold)" }}
+          style={{ borderRadius: "50%", objectFit: "cover", objectPosition: "center 20%", border: "1.5px solid var(--gold)", flexShrink: 0 }}
           priority
         />
         <span className="logo-text">Ozodbek Salohiddinov</span>
@@ -241,94 +241,6 @@ export const Navbar: React.FC = () => {
         />
       )}
 
-      {/* Custom CSS overrides for responsiveness */}
-      <style jsx>{`
-        .hamburger-btn {
-          display: none;
-          background: transparent;
-          border: none;
-          color: #fff;
-          cursor: pointer;
-          margin-left: 1rem;
-          padding: 0.5rem;
-          align-items: center;
-          justify-content: center;
-          transition: color 0.3s ease;
-        }
-
-        .hamburger-btn:hover {
-          color: var(--gold);
-        }
-
-        .mobile-menu-overlay {
-          position: fixed;
-          top: 0;
-          left: 0;
-          width: 100vw;
-          height: 100vh;
-          background: rgba(3, 3, 3, 0.98);
-          backdrop-filter: blur(20px);
-          -webkit-backdrop-filter: blur(20px);
-          z-index: 9999;
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-        }
-
-        .close-btn {
-          position: absolute;
-          top: 2rem;
-          right: 2rem;
-          background: transparent;
-          border: none;
-          color: #fff;
-          cursor: pointer;
-          padding: 0.5rem;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          transition: color 0.3s ease;
-        }
-
-        .close-btn:hover {
-          color: var(--gold);
-        }
-
-        .mobile-menu-links {
-          list-style: none;
-          padding: 0;
-          margin: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          gap: 2.5rem;
-        }
-
-        .mobile-menu-links a {
-          color: var(--text-secondary);
-          font-weight: 700;
-          font-size: 1.8rem;
-          text-transform: uppercase;
-          text-decoration: none;
-          letter-spacing: 2px;
-          transition: all 0.3s ease;
-        }
-
-        .mobile-menu-links a:hover, .mobile-menu-links a.active {
-          color: var(--gold);
-          text-shadow: 0 0 15px var(--gold-glow);
-        }
-
-        @media (max-width: 768px) {
-          nav :global(.nav-links) {
-            display: none !important;
-          }
-          .hamburger-btn {
-            display: flex !important;
-          }
-        }
-      `}</style>
     </nav>
   );
 };

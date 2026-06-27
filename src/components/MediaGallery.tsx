@@ -18,7 +18,14 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
 
   const handlePlayClick = () => {
     if (videoRef.current) {
-      videoRef.current.play();
+      videoRef.current.play().catch((err) => {
+        console.error("Video play blocked:", err);
+        // Fallback: try to play it muted
+        if (videoRef.current) {
+          videoRef.current.muted = true;
+          videoRef.current.play().catch((e) => console.error("Muted play failed:", e));
+        }
+      });
     }
   };
 
@@ -42,6 +49,7 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
       <div className="video-wrapper">
         <video
           ref={videoRef}
+          src={video.src}
           controls={isPlaying}
           preload="metadata"
           playsInline
@@ -49,9 +57,7 @@ const GalleryVideo: React.FC<{ video: VideoItem; t: any }> = ({ video, t }) => {
           onPlay={handlePlay}
           onPause={handlePause}
           onEnded={handlePause}
-        >
-          <source src={video.src} type="video/mp4" />
-        </video>
+        />
 
         {!isPlaying && (
           <button
