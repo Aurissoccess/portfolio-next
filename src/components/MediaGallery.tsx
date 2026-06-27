@@ -131,7 +131,6 @@ export const MediaGallery: React.FC = () => {
     { id: "v15", src: "/videolar/mersedes_benz.mp4", titleKey: "media-v15", aspect: "horizontal" },
     { id: "v16", src: "/videolar/sahro.mp4", titleKey: "media-v16", aspect: "horizontal" },
     { id: "v17", src: "/videolar/adrenaline_ads.mp4", titleKey: "media-v17", aspect: "horizontal" },
-    { id: "v18", src: "/videolar/estetik.mp4", titleKey: "media-v18", aspect: "horizontal" },
     { id: "v19", src: "/videolar/img_5063.mp4", titleKey: "media-v19", aspect: "horizontal" },
     { id: "v20", src: "/videolar/img_5064.mp4", titleKey: "media-v20", aspect: "horizontal" },
     { id: "v21", src: "/videolar/hf_20260403_153858_757f5c5c_55f1_45a9_bee5_7f674b8ac18a.mp4", titleKey: "media-v21", aspect: "horizontal" },
